@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+
+
+<div class="box" id="heading">
+<h1 style="color:purple"><%= day %></h1></div>
+
+<div class="box">
+
+<% for (var i=0;i<toDos.length;i++){ %>
+<form  action="/delete" method="POST" ><div class="item"> 
+    <input type="checkbox" name="id" value="<%=toDos[i]._id  %>" onChange="this.form.submit()">
+    <p>
+    <%= toDos[i].name %>
+</p> </div>
+
+<input type="hidden" name="listName" value="<%=day%>">
+</form>
+<%}%>
+<form class ="item" action="/" method="POST">
+  
+
+  
+    
+    <input type="text" id="toDo" name="toDo" placeholder="Add TODO" autocomplete="off"><br>
+    <button type="submit" name="list" value="<%=day%>">+</button>
+
+
+</form>
+
+</div>
+
+</body>
+</html>
