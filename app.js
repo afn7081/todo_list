@@ -37,8 +37,8 @@ const ToDo=new mongoose.model('Todo',todoSchema)
 
 
 
-const todo1=new ToDo({name:"Sex"})
-const todo2=new ToDo({name:"FAX"})
+const todo1=new ToDo({name:"Add Items by clicking on the add button"})
+const todo2=new ToDo({name:"Or use Url to make a custom list eg-{adress}/work"})
 
 const defaultTodos=[todo1,todo2]
 
